@@ -1,0 +1,150 @@
+@import '../../variables.scss';
+
+.main {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    
+    .contentBanner {
+        width: 100%;
+        height: 380px;
+        position: relative;
+        background-color: $gray-color;
+
+        .banner {
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+            background: fixed;
+            border-bottom-left-radius: 24 px;
+            border-bottom-right-radius: 24 px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: $main-orange;
+        }
+    }
+
+    .contentProfile {
+        display: flex;
+        box-sizing: border-box;
+        width: 50rem;
+        max-width: 100%;
+        position: absolute;
+        background-color: $white-background;
+        border-top-right-radius: 18px ;
+        border-top-left-radius:  18px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 30px;
+
+        .divLeft {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .contentPicture {
+                width: 9.2rem;
+                height: 9.2rem;
+                background-color: $main-orange;
+                border-radius: 100px;
+                position: relative;
+    
+                .picture {
+                    object-fit: cover;
+                    border-radius: 50%;
+                    object-position: top right;
+                    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            p {
+                font-size: 30px;
+                font-weight: bold;
+                color: $gray-color;
+                padding-top: 0.5rem;
+                text-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .line {
+                width: 12rem;
+                height: 2px;
+                background-color: $gray-color;
+                border-radius: 100px;
+            }
+        }
+        .divRight {
+            display: flex;
+            flex-direction: column;
+            max-width: 25rem;
+            box-sizing: border-box;
+
+            .divInfo {
+                max-height: 10rem;
+                text-align: left;
+                flex-direction: column;
+                padding: 12px;
+                overflow-y: auto;
+
+                .text {
+                    font-size: 24px;
+                    color: $gray-color;
+                    padding-top: 5px;
+                    font-weight: 500;
+                    text-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2);
+                }
+            }
+            .divInfo::-webkit-scrollbar {
+                width: 5px;
+            }
+            .divInfo::-webkit-scrollbar-track {
+                background: transparent;
+                padding: 2px;
+            }
+            .divInfo::-webkit-scrollbar-thumb {
+                background-color: $gray-color;
+            }
+
+            .divIcons {
+                display: flex;
+                width: 100%;
+                overflow-x: auto;
+                margin-top: 10px;
+            }
+            .divIcons::-webkit-scrollbar {
+                height:8px;
+            }
+            .divIcons::-webkit-scrollbar-track {
+                background: transparent;
+                padding: 2px;
+            }
+            .divIcons::-webkit-scrollbar-thumb {
+                background-color: $gray-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .main {
+        .contentBanner {
+            height: 550px;
+        }
+        .contentProfile {
+            flex-direction: column;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .main {
+        .contentBanner {
+            height: 550px;
+        }
+        .contentProfile {
+            flex-direction: column;
+        }
+    }
+}

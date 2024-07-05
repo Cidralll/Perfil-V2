@@ -1,0 +1,17 @@
+@import '../../variables.scss';
+
+.footer {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    flex-direction: column;
+    background-color: $main-orange;
+
+    p {
+        font-size: 17px;
+        color: $white-background;
+    }
+}
